@@ -42,7 +42,7 @@ Now, let's try to create a runtime configuration store inside your project where
 The base command for everything Cloud Runtime Configuration-related within the gcloud tools is   
 `gcloud beta runtime-config` and you can always add `--help` to your command to see available commands, flags and similar.
 
-###### Create a config store
+#### Create a config store
 
 To create a config store within our project we'll run:  
 `gcloud beta runtime-config configs create [CONFIG_NAME] --description [DESCRIPTION]`  
@@ -54,7 +54,7 @@ Now, because this service is still in beta you're gonna be asked to install the 
 
 And that's it! Your store is created and now you're ready to create your first variable.
 
-###### Create your first variable
+#### Create your first variable
 
 OK so lets continue with gcloud for now and use it to create a variable. Here's what we'll do:  
 `gcloud beta runtime-config configs variables set foo \ "bar" --config-name myConfigStore --is-text`  
@@ -67,7 +67,7 @@ Running the above command will generate a response something like this in our te
 
 `Created [https://runtimeconfig.googleapis.com/v1beta1/projects/[my-project]/configs/myConfigStore/variables/foo].`
 
-###### Getting variables
+#### Getting variables
 
 Now, let's see if we can get it out as well. The syntax is very similar.   
 `gcloud beta runtime-config configs variables get-value foo --config-name myConfigStore`
@@ -76,7 +76,7 @@ This will hopefully print `bar` just below! 
 
 We'll try one more thing before getting started with our Kotlin code, to show a typical use-case.
 
-###### Listing all values
+#### Listing all values
 
 This is handy if you wanna check out what values you have stored so far:  
 `gcloud beta runtime-config configs variables list --config-name myConfigStore --values`
@@ -89,7 +89,7 @@ So basically what we will do is to create a serverside app in Kotlin that will t
 
 To achieve this we will use Google's Java library for Runtime Configurator, authorized with a service account over OAUTH2.  Doesn't sound very complicated does it?
 
-###### Getting pre-authorized
+#### Getting pre-authorized
 
 Before we get coding, let's create a service account to be used in our application for authorization. 
 
@@ -99,7 +99,7 @@ Before we get coding, let's create a service account to be used in our applicati
 
 3\. Then press next, and in the final step, press Create Key to download your newly forged service account credentials as a JSON-file. Keep this file safe as it's all that's needed to authorize anyone to read your variables from the config store! Create a new folder within your `resources` folder and put your credentials file there.
 
-###### Our application
+#### Our application
 
 We should only need a single dependency for our project, the Cloud Runtime Configuration Java lib. Add the following line to your build.gradle.kts
 
