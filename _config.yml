@@ -10,7 +10,7 @@ user_title: cakism
 email: hello@cakism.com
 twitter_username: cakism
 github_username:  cakism
-linkedin_public_url: loremipsum # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
+linkedin_public_url: jensolander # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
 profile_picture: https://orig00.deviantart.net/93c4/f/2014/117/5/2/bmo_gif_by_generic_human-d7gaezj.gif
 
 # Build settings
@@ -45,7 +45,7 @@ links:
       key_trigger: 5
   section_2:
     - title: github
-      url: http://www.github.com/victorvoid
+      url: http://www.github.com/cakism
       new_tab: true
       key_trigger: g
     - title: twitter
@@ -57,6 +57,10 @@ links:
 
 # projects in header index
 projects:
+  - name: Planning Poker (React-Kotlin-Spring)
+    url: https://github.com/cakism/planningpoker
+  - name: Unikins
+    url: https://github.com/cakism/unikins
   - name: Slaskibot 
     url: https://github.com/cakism/slaskibot
 
